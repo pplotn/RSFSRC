@@ -487,7 +487,7 @@ __global__ void cuda_update_vel(float *vv, float *cg, float alpha, int nz, int n
 	int id=i1+i2*nz;
 
 	if (i1<nz && i2<nx) vv[id]=vv[id]+alpha*cg[id];
-	if (i1<nz && i2<nx) vv[id]=fmaxf(1500, fminf(5000, vv[id]));
+	if (i1<nz && i2<nx) vv[id]=fmaxf(1500, vv[id] );
 }
 
 __global__ void cuda_bell_smoothz(float *g, float *smg, int rbell, int nz, int nx)
