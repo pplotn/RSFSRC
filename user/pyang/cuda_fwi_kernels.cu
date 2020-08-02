@@ -289,6 +289,10 @@ __global__ void cuda_scale_gradient(float *g1, float *vv, float *illum, int nz, 
 		if (precon) a*=(illum[id]+EPS);/*precondition with residual wavefield illumination*/
 		g1[id]*=2.0/a;
 	}
+	if i1<18
+	{
+		g1[id]=0
+	}
 }
 
 
