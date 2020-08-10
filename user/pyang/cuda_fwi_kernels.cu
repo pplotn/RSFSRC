@@ -291,7 +291,7 @@ __global__ void cuda_scale_gradient(float *g1, float *vv, float *illum, int nz, 
 	}
 	if (i1<18)
 	{
-		g1[id]=0
+		g1[id]=0;
 	}
 }
 
